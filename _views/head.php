@@ -8,6 +8,7 @@
             ?> | <?php
             echo $objPage->subtitle;
             ?></title>
+        <link rel="stylesheet" href="<?php echo $objPage->path; ?>_css/common.css">
     </head>
     <body>
-        <div style="margin: 0 auto; width: 960px">
+        <div>

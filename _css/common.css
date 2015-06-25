@@ -1,0 +1,15 @@
+/* 
+    Created on : Jun 25, 2015, 3:01:29 AM
+    Author     : Jeffrey
+*/
+
+body {
+    background-color: whitesmoke;
+}
+
+body div {
+    background-color: white;
+    margin: 0 auto;
+    width: 960px;
+}
+
