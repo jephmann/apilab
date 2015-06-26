@@ -8,7 +8,7 @@
 
    class API_CityOfChicago extends API {
 
-           private $key    = "YourKeyHere";
-           private $url    = "BaseURLofAPI";
+           private $key    = NULL;
+           private $url    = "https://data.cityofchicago.org/resource/xzkq-xp2w.json";
 
    }
