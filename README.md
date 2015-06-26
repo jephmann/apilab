@@ -15,3 +15,4 @@ For starters I might access APIs already known to me:
 * TheMovieDB
 * Weather Undergound
 * MeetUp
+* City of Chicago (no API key required)
