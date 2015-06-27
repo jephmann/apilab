@@ -29,15 +29,16 @@ I start with a class called "API", which:
 
 * initializes two properties: an API key and a base URL for the source of the
 API data. (Not every API requires an API key.)
-* contains a single method for retrieving JSON data from the API and decoding
-the data into an associative array.
+* contains a single method, "json_retrieve($url)", for retrieving JSON data from
+the API and decoding the data into an associative array.
 * might or might not soon include alternative methods to JSON.
 
-Each "API_ClassName" class extends the "API" class and thus inherits its
-properties and methods. Each of those classes gets its own base URL and API key
-(if any). Then each of those classes will have methods for building specific
-URLs based on the base URL and the API key (if necessary) to retrieve specific
-kinds of data.
+Each "API_ClassName" class:
+* extends the "API" class and thus inherits its properties and methods.
+* gets its own base URL and API key (if any).
+* will have custom methods for building specific URLs based on the base URL and
+the API key (if necessary) to retrieve specific kinds of data. Those URLs are
+what I send to the "json_retrieve($url)" method.
 
 ### AngularJS Notes
 
