@@ -16,3 +16,6 @@ For starters I might access APIs already known to me:
 * Weather Undergound
 * MeetUp
 * City of Chicago (no API key required)
+
+To be clear, this project is about tapping into outside API data and not about
+me writing my own API.
