@@ -13,3 +13,8 @@ body div {
     width: 960px;
 }
 
+pre {
+    background-color: whitesmoke;
+    border: 1px silver dashed;
+}
+

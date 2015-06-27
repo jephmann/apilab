@@ -1,7 +1,8 @@
 <?php
     require_once '_inc/first.php';
-    $objPage = new Page;
-    $objPage->subtitle = "Home";
+    $objPage            = new Page;
+    $objPage->title     = "Home";
+    $objPage->subtitle  = "Contents";
 
     /*
      * Additional code if necessary
@@ -14,11 +15,11 @@
     require_once '_views/header.php';
 ?>
         <article>
-            <h3>Contents</h3>
             <ul>
                 <li><a href="meetup/">MeetUp</a></li>
                 <li><a href="themoviedb/">TheMovieDB</a></li>
                 <li><a href="wunderground/">Weather Underground</a></li>
+                <li><a href="cityofchicago/">City of Chicago</a></li>
             </ul>
         </article>
 <?php
