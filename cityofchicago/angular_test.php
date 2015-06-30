@@ -19,6 +19,15 @@
         <link rel="stylesheet" href="<?php echo $objPage->path; ?>_css/common.css">
     </head>
 	<body ng-app="apilab">
+            <p>
+                This page and much of the accompanying AngularJS code comes from
+                a hands-on coding MeetUp for those new to AngularJS itself. Said
+                MeetUp used City of Chicago data as an API example. I include it
+                here for now if only to test AngularJS itself within this
+                project's file management system (such as it is). As this
+                project evolves (along with my understanding of AngularJS), this
+                page may go soon.
+            </p>
 		{{1+1}}
 		<!-- https://data.cityofchicago.org/resource/xzkq-xp2w.json -->
 
