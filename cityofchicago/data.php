@@ -3,12 +3,7 @@
     $objPage        = new Page;
     $objPage->title = "City of Chicago";
     $objPage->path  = "../";
-    $objPage->data  = "https://data.cityofchicago.org/";
-
-    /*
-     * Additional code if necessary
-     */
-    
+    $objPage->data  = "https://data.cityofchicago.org/";    
     $code               = htmlspecialchars($_GET['code']);
     $objPage->subtitle  = $code;
     $objChicago         = new API_CityOfChicago;
