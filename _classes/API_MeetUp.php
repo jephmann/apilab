@@ -33,6 +33,9 @@
                 . "&sign=true"
                 . "&photo-host=public"
                 . "&order=name";
+                // Default sort ("&order") is by "name".
+                // I could make this a parameter of the function at any time.
+                // I simply don't want to (yet).
             return $url_topics;
         }
 
