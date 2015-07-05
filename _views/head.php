@@ -8,7 +8,7 @@
             ?> | <?php
             echo $objPage->title;
             ?></title>
-        <link rel="stylesheet" href="<?php echo $objPage->path; ?>_css/common.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     </head>
     <body>
-        <div>
+        <div class="container">

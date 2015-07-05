@@ -16,24 +16,29 @@
             ?> | <?php
             echo $objPage->title;
             ?></title>
-        <link rel="stylesheet" href="<?php echo $objPage->path; ?>_css/common.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     </head>
-	<body ng-app="apilab">
+    <body ng-app="apilab">
+            <div class="container" ng-controller="ctrlAPILab">
 
-		<div ng-controller="ctrlAPILab">
-			<h1>{{title}}</h1>
-			<table border="1">
-				<tr>
-					<th>Job Title</th>
-					<th>Name</th>
-					<th>Salary</th>
-				</tr>
-				<tr ng-repeat="employee in cityEmployees | orderBy:'-employee_annual_salary'">
-					<td>{{employee.job_titles}}</td>
-					<td>{{employee.name}}</td>
-					<td>{{employee.employee_annual_salary}}</td>
-				</tr>
-			</table>
+                <h1>{{text_h1}}</h1>                    
+                <h2>{{text_h2}}</h2>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Job Title</th>
+                            <th>Name</th>
+                            <th>Salary</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="employee in cityEmployees | orderBy:'-employee_annual_salary'">
+                                <td>{{employee.job_titles}}</td>
+                                <td>{{employee.name}}</td>
+                                <td>{{employee.employee_annual_salary}}</td>
+                        </tr>
+                    </tbody>
+                </table>
 <?php
     require_once "{$objPage->path}_views/footer.php";
     require_once "{$objPage->path}_views/foot.php";
