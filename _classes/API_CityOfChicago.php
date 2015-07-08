@@ -8,7 +8,7 @@
 
    class API_CityOfChicago extends API {
 
-        private $key    = NULL;
+        private $key    = NULL; // there is no API key
         private $url    = "http://data.cityofchicago.org/resource/";
 
         public function url_data($code) {

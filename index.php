@@ -20,6 +20,7 @@
                 <li><a href="themoviedb/">TheMovieDB</a></li>
                 <li><a href="wunderground/">Weather Underground</a></li>
                 <li><a href="cityofchicago/">City of Chicago</a></li>
+                <li><a href="last.fm/">Last.fm</a></li>
             </ul>
         </article>
 <?php
