@@ -4,7 +4,8 @@
 
 Here I shall practice and test various means to access varied API data sources
 -- whether via server-side or client-side, in whatever form the data might be.
-For now my concentration is on using PHP and AngularJS on JSON data.
+For now my concentration is on using PHP and AngularJS on JSON data as well as
+PHP on XML.
 
 Look and Feel (e.g. navigation, making it pretty, etc.) is the lowest priority
 for this project. To be clear, this project is not about me writing my own API.
@@ -13,12 +14,13 @@ API data in its varying forms via varying means.
 
 For the immediate future this will likely be at an "API 101" level.
 
-For starters I might access APIs already known to me:
+For starters I might access JSON APIs already known to me:
 
 * TheMovieDB
 * Weather Undergound
 * MeetUp
 * City of Chicago (no API key required)
+* Last.fm (both JSON and XML)
 
 ### PHP Notes
 
