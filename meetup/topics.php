@@ -8,7 +8,7 @@
     
     $objMeetup         = new API_MeetUp;
     $urlData            = $objMeetup->url_topics();
-    $data               = $objMeetup->json_retrieve($urlData);
+    $data               = $objMeetup->retrieve_data($urlData, TRUE);
     
     /*
      * HTML BEGIN

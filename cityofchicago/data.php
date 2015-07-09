@@ -1,14 +1,14 @@
 <?php
     require_once '../_inc/first.php';
-    $objPage        = new Page;
-    $objPage->title = "City of Chicago";
-    $objPage->path  = "../";
-    $objPage->data  = "https://data.cityofchicago.org/";    
+    $objPage            = new Page;
+    $objPage->title     = "City of Chicago";
+    $objPage->path      = "../";
+    $objPage->data      = "https://data.cityofchicago.org/";    
     $code               = htmlspecialchars($_GET['code']);
     $objPage->subtitle  = $code;
     $objChicago         = new API_CityOfChicago;
     $urlData            = $objChicago->url_data($code);    
-    $data               = $objChicago->json_retrieve($urlData);    
+    $data               = $objChicago->retrieve_data($urlData,TRUE);
     
     /*
      * HTML BEGIN

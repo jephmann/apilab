@@ -9,7 +9,7 @@
     $id_group           = 14630102; 
     $objMeetup          = new API_MeetUp;
     $urlData            = $objMeetup->url_group_id($id_group);
-    $data               = $objMeetup->json_retrieve($urlData);
+    $data               = $objMeetup->retrieve_data($urlData, TRUE);
     
     /*
      * HTML BEGIN

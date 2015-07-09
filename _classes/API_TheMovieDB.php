@@ -1,10 +1,10 @@
 <?php
 
-/**
- * Description of API_TheMovieDB
- *
- * @author Jeffrey
- */
+    /**
+     * Description of API_TheMovieDB
+     *
+     * @author Jeffrey
+     */
 
     class API_TheMovieDB extends API
         {
@@ -19,47 +19,47 @@
             // retrieve urls for movies
             public function url_title($id_title)
             {
-                $url_title = "{$this->url}movie/{$id_title}?api_key={$this->key}";
-                return $url_title;
+                $result = "{$this->url}movie/{$id_title}?api_key={$this->key}";
+                return $result;
             }
             public function url_title_credits($id_title)
             {
-                $url_title_credits = "{$this->url}movie/{$id_title}/credits?api_key={$this->key}";
-                return $url_title_credits;
+                $result = "{$this->url}movie/{$id_title}/credits?api_key={$this->key}";
+                return $result;
             }
             public function url_title_images($id_title)
             {
-                $url_title_images = "{$this->url}movie/{$id_title}/images?api_key={$this->key}&language=en&include_image_language=en,null";
-                return $url_title_images;
+                $result = "{$this->url}movie/{$id_title}/images?api_key={$this->key}&language=en&include_image_language=en,null";
+                return $result;
             }
             
             // retrieve urls for persons
             public function url_name($id_name)
             {
-                $url_name = "{$this->url}person/{$id_name}?api_key={$this->key}";
-                return $url_name;
+                $result = "{$this->url}person/{$id_name}?api_key={$this->key}";
+                return $result;
             }
             public function url_name_credits($id_name)
             {
-                $url_name_credits = "{$this->url}person/{$id_name}/movie_credits?api_key={$this->key}";
-                return $url_name_credits;
+                $result = "{$this->url}person/{$id_name}/movie_credits?api_key={$this->key}";
+                return $result;
             }
             public function url_name_images($id_name)
             {
-                $url_name_images = "{$this->url}person/{$id_name}/images?api_key={$this->key}";
-                return $url_name_images;
+                $result = "{$this->url}person/{$id_name}/images?api_key={$this->key}";
+                return $result;
             }
             
             // retrieve urls for text searches
             public function url_search_title($text)
             {
-                $url_search_title = "{$this->url}search/movie?api_key={$this->key}&query={$text}";
-                return $url_search_title;
+                $result = "{$this->url}search/movie?api_key={$this->key}&query={$text}";
+                return $result;
             }
             public function url_search_name($text)
             {
-                $url_search_name = "{$this->url}search/person?api_key={$this->key}&query={$text}";
-                return $url_search_name;
+                $result = "{$this->url}search/person?api_key={$this->key}&query={$text}";
+                return $result;
             }
 
         }

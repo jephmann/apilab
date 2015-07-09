@@ -9,7 +9,7 @@
     $id_member          = 9700980; 
     $objMeetup          = new API_MeetUp;
     $urlData            = $objMeetup->url_member_id($id_member);
-    $data               = $objMeetup->json_retrieve($urlData);
+    $data               = $objMeetup->retrieve_data($urlData, TRUE);
     
     /*
      * HTML BEGIN
