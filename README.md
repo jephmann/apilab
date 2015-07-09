@@ -46,7 +46,7 @@ Each "API_ClassName" class:
 * gets its own base URL, API key (if any) and API secret (if any).
 * has custom methods for building specific URLs based on the base URL and
 the API key (if necessary) to retrieve specific kinds of data. Those URLs are
-what I send to the "json_retrieve($url)" method.
+what I send to the "retrieve_data($url, BOOLEAN)" method.
 
 ### AngularJS Notes
 
