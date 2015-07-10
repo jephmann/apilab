@@ -53,12 +53,18 @@
             // retrieve urls for text searches
             public function url_search_title($text)
             {
-                $result = "{$this->url}search/movie?api_key={$this->key}&query={$text}";
+                $text = urlencode($text);
+                $result = "{$this->url}search/movie"
+                . "?api_key={$this->key}"
+                . "&query={$text}";
                 return $result;
             }
             public function url_search_name($text)
             {
-                $result = "{$this->url}search/person?api_key={$this->key}&query={$text}";
+                $text = urlencode($text);
+                $result = "{$this->url}search/person"
+                . "?api_key={$this->key}"
+                . "&query={$text}";
                 return $result;
             }
 
