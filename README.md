@@ -9,7 +9,16 @@ using PHP and AngularJS on JSON data as well as PHP on XML.
 
 Look and Feel (e.g. navigation, making it pretty, etc.) is the lowest priority
 for this project. I may implement minimal styling and frameworks like Bootstrap
-if only to maintain my focus what I can do with the data. 
+if only to maintain my focus what I can do with the data.
+
+Regardless, the best use for this project -- at least for me -- is a place to
+make all of my API mistakes before applying my code to existing projects. As I
+write this, I have two projects on this GitHub account which call APIs, albeit
+at simple, basic levels. If I needed to do more with either of those projects,
+I could now go here first. (For example, on bootstrapmovie I'm trying to figure
+out how to get more results from a name or title search than what I have been
+getting. I now have this lab to work on such an issue without making any major
+messes to bootstrapmovie.)
 
 To be clear, this project is not about me writing my own API.
 The highest priority in this project is me *practicing* accessing and displaying
