@@ -17,19 +17,19 @@
             public static $url_themoviedb = "https://www.themoviedb.org/";
 
             // retrieve urls for movies
-            public function url_title($id_title)
+            public function url_movie($id_title)
             {
                 $result = "{$this->url}movie/{$id_title}"
                     . "?api_key={$this->key}";
                 return $result;
             }
-            public function url_title_credits($id_title)
+            public function url_movie_credits($id_title)
             {
                 $result = "{$this->url}movie/{$id_title}/credits"
                     . "?api_key={$this->key}";
                 return $result;
             }
-            public function url_title_images($id_title)
+            public function url_movie_images($id_title)
             {
                 $result = "{$this->url}movie/{$id_title}/images"
                     . "?api_key={$this->key}"
@@ -39,19 +39,19 @@
             }
             
             // retrieve urls for persons
-            public function url_name($id_name)
+            public function url_person($id_name)
             {
                 $result = "{$this->url}person/{$id_name}"
                     . "?api_key={$this->key}";
                 return $result;
             }
-            public function url_name_credits($id_name)
+            public function url_person_credits($id_name)
             {
                 $result = "{$this->url}person/{$id_name}/movie_credits"
                     . "?api_key={$this->key}";
                 return $result;
             }
-            public function url_name_images($id_name)
+            public function url_person_images($id_name)
             {
                 $result = "{$this->url}person/{$id_name}/images"
                     . "?api_key={$this->key}";

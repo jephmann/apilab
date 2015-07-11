@@ -1,10 +1,10 @@
 <?php
-    require_once '../_inc/first.php';    
+    require_once '../_inc/first.php';
     $objPage            = new Page;
     $objPage->data      = "http://docs.themoviedb.apiary.io/#";
     $objPage->path      = "../";
     $objPage->subtitle  = "Search Movie";
-    $objPage->title     = "TheMovieDB";    
+    $objPage->title     = "TheMovieDB";
     
     /*
      * 1. get the number of pages ("total_pages") from the query (retrieved via class method)
