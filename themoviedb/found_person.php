@@ -26,18 +26,19 @@
     $objMovieDB         = new API_TheMovieDB;
     
     // 1 of 3: topic data    
-    $url_topic          = $objMovieDB->url_person($id);
+    $url_topic          = $objMovieDB->url_found($id, $topic);
     $data[$topic]       = $objMovieDB->retrieve_data($url_topic, TRUE);
     
     // topic
     $person             = $data[$topic];
+    $person_imdb        = $person['imdb_id'];
     $person_name        = $person['name'];
     $person_biography   = $person['biography'];
     $person_birthday    = $person['birthday'];
     $person_deathday    = $person['deathday'];
     
     // 2 of 3: topic's credits
-    $url_credits        = $objMovieDB->url_person_credits($id);
+    $url_credits        = $objMovieDB->url_found($id, $topic, 'movie_credits');
     $data['credits']    = $objMovieDB->retrieve_data($url_credits, TRUE);
     
     // credits
@@ -48,7 +49,7 @@
     $ct_credits_crew    = count($credits_crew);
     
     // 3 of 3: topic's images
-    $url_images         = $objMovieDB->url_person_images($id);
+    $url_images         = $objMovieDB->url_found($id, $topic, 'images');
     $data['images']     = $objMovieDB->retrieve_data($url_images, TRUE);
     
     // images
@@ -56,7 +57,6 @@
     $person_images      = $data['images'];
     $person_profiles    = $person_images['profiles'];
     $ct_profiles        = count($person_profiles);
-    
     
     /*
      * HTML BEGIN

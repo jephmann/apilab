@@ -22,7 +22,7 @@
             Default (Main) Profile:<br />
             <img alt="" src="<?php echo $person_profile; ?>" />
         </p>
-        <p>Other Posters (if any):</p>
+        <p>Other Profiles (if any):</p>
         <?php
             for ($p=0; $p<$ct_profiles; $p++) :
                 $src_profile = $objMovieDB->url_profile($person_profiles[$p]['file_path']);

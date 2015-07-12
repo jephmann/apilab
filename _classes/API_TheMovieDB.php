@@ -8,75 +8,36 @@
 
     class API_TheMovieDB extends API
         {
-            private $key = "f5100af9458f136f2e7e38267a6aabfa";
-            //private $url = "http://private-85e98-themoviedb.apiary.io/3/";
-            //private $url = "http://private-85e98-themoviedb.apiary-mock.com/3/";
-            private $url = "http://api.themoviedb.org/3/";
+            private $url                    = "http://api.themoviedb.org/3/";
+            private $key                    = "f5100af9458f136f2e7e38267a6aabfa";
+            //private $url                  = "http://private-85e98-themoviedb.apiary.io/3/"; *
+            //private $url                  = "http://private-85e98-themoviedb.apiary-mock.com/3/"; *
+            // * -- simple reminders that APIs change.
             
-            public static $url_imdb = "http://www.imdb.com/";
-            public static $url_themoviedb = "https://www.themoviedb.org/";
+            public static $url_imdb         = "http://www.imdb.com/";
+            public static $url_themoviedb   = "https://www.themoviedb.org/";
             
             // image path links (image files appended later)
-            public $url_image    = "https://image.tmdb.org/t/p/";
+            public $url_image               = "https://image.tmdb.org/t/p/";
             
+            // retrieve images for found persons (profile)
             public function url_profile($filename)
             {
                 $result = "{$this->url_image}w185{$filename}";
                 return $result;
             }
             
+            // retrieve images for found movies (posters)
             public function url_poster($filename)
             {
                 $result = "{$this->url_image}w185{$filename}";
                 return $result;
             }
             
+            // retrieve images for found movies (backdrops)
             public function url_backdrop($filename)
             {
                 $result = "{$this->url_image}w300{$filename}";
-                return $result;
-            }         
-            
-
-            // retrieve urls for movies
-            public function url_movie($id_title)
-            {
-                $result = "{$this->url}movie/{$id_title}"
-                    . "?api_key={$this->key}";
-                return $result;
-            }
-            public function url_movie_credits($id_title)
-            {
-                $result = "{$this->url}movie/{$id_title}/credits"
-                    . "?api_key={$this->key}";
-                return $result;
-            }
-            public function url_movie_images($id_title)
-            {
-                $result = "{$this->url}movie/{$id_title}/images"
-                    . "?api_key={$this->key}"
-                    . "&language=en"
-                    . "&include_image_language=en,null";
-                return $result;
-            }
-            
-            // retrieve urls for persons
-            public function url_person($id_name)
-            {
-                $result = "{$this->url}person/{$id_name}"
-                    . "?api_key={$this->key}";
-                return $result;
-            }
-            public function url_person_credits($id_name)
-            {
-                $result = "{$this->url}person/{$id_name}/movie_credits"
-                    . "?api_key={$this->key}";
-                return $result;
-            }
-            public function url_person_images($id_name)
-            {
-                $result = "{$this->url}person/{$id_name}/images"
-                    . "?api_key={$this->key}";
                 return $result;
             }
             

@@ -31,12 +31,13 @@
     
     // topic
     $movie              = $data[$topic];
+    $movie_imdb         = $movie['imdb_id'];
     $movie_title        = $movie['title'];
     $movie_overview     = $movie['overview'];
     $movie_release_date = $movie['release_date'];
     
     // 2 of 3: topic's credits
-    $url_credits        = $objMovieDB->url_movie_credits($id);
+    $url_credits        = $objMovieDB->url_found($id, $topic, 'credits');
     $data['credits']    = $objMovieDB->retrieve_data($url_credits, TRUE);
     
     // credits
