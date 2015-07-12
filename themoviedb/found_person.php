@@ -15,6 +15,7 @@
     else
     {
         $id = 8635;     // default for testing (Buster Keaton)
+        $id = 101472;     // default for testing (Buster Keaton)
     }
     
     $data = array(
@@ -50,13 +51,13 @@
     $ct_credits_cast    = count($credits_cast);
     usort($credits_cast, function ($a, $b) use(&$use_release_date){
         return $b[$use_release_date] - $a[$use_release_date];
-    });    
+    }); // not entire sure about this sort
     
     $credits_crew       = $credits['crew'];
     $ct_credits_crew    = count($credits_crew);
     usort($credits_crew, function ($a, $b) use(&$use_release_date){
         return $b[$use_release_date] - $a[$use_release_date];
-    });
+    }); // not entire sure about this sort
     
     // 3 of 3: topic's images
     $url_images         = $objMovieDB->url_found($id, $topic, 'images');

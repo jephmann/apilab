@@ -53,6 +53,7 @@
     
     $credits_crew       = $credits['crew'];
     $ct_credits_crew    = count($credits_crew);
+    // would like to sort/group by department/job
     
     // 3 of 3: topic's images
     $url_images         = $objMovieDB->url_found($id, $topic, 'images');
