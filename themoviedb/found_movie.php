@@ -23,19 +23,40 @@
         'images'    => array()
     );
     
-    $objMovieDB = new API_TheMovieDB;
+    $objMovieDB         = new API_TheMovieDB;
     
     // 1 of 3: topic data    
-    $url_topic          = $objMovieDB->url_movie($id);
+    $url_topic          = $objMovieDB->url_found($id, $topic);
     $data[$topic]       = $objMovieDB->retrieve_data($url_topic, TRUE);
+    
+    // topic
+    $movie              = $data[$topic];
+    $movie_title        = $movie['title'];
+    $movie_overview     = $movie['overview'];
+    $movie_release_date = $movie['release_date'];
     
     // 2 of 3: topic's credits
     $url_credits        = $objMovieDB->url_movie_credits($id);
     $data['credits']    = $objMovieDB->retrieve_data($url_credits, TRUE);
     
+    // credits
+    $credits            = $data['credits'];
+    $credits_cast       = $credits['cast'];
+    $credits_crew       = $credits['crew'];
+    $ct_credits_cast    = count($credits_cast);
+    $ct_credits_crew    = count($credits_crew);
+    
     // 3 of 3: topic's images
-    $url_images         = $objMovieDB->url_movie_images($id);
+    $url_images         = $objMovieDB->url_found($id, $topic, 'images');
     $data['images']     = $objMovieDB->retrieve_data($url_images, TRUE);
+    
+    // images
+    $movie_poster       = $objMovieDB->url_poster($data['movie']['poster_path']);
+    $movie_images       = $data['images'];
+    $movie_posters      = $movie_images['posters'];
+    $movie_backdrops    = $movie_images['backdrops'];
+    $ct_posters         = count($movie_posters);
+    $ct_backdrops       = count($movie_backdrops);
     
     /*
      * HTML BEGIN

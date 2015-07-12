@@ -15,6 +15,28 @@
             
             public static $url_imdb = "http://www.imdb.com/";
             public static $url_themoviedb = "https://www.themoviedb.org/";
+            
+            // image path links (image files appended later)
+            public $url_image    = "https://image.tmdb.org/t/p/";
+            
+            public function url_profile($filename)
+            {
+                $result = "{$this->url_image}w185{$filename}";
+                return $result;
+            }
+            
+            public function url_poster($filename)
+            {
+                $result = "{$this->url_image}w185{$filename}";
+                return $result;
+            }
+            
+            public function url_backdrop($filename)
+            {
+                $result = "{$this->url_image}w300{$filename}";
+                return $result;
+            }         
+            
 
             // retrieve urls for movies
             public function url_movie($id_title)
@@ -59,16 +81,17 @@
             }
             
             // retrieve urls for found data
-            public function url_found($topic, $id, $subtopic=NULL)
+            public function url_found($id, $topic, $subtopic=NULL)
             {
                 $topic          = urlencode($topic);
                 $result         = "{$this->url}{$topic}/{$id}";
                 if ($subtopic)
                 {
                     $subtopic   = urlencode($subtopic);
-                    $result     += "/{$subtopic}";
+                    $result     = "{$result}/{$subtopic}";
                 }
-                $result         += "?api_key={$this->key}";                
+                $result         = "{$result}?api_key={$this->key}";
+                return $result;
             }
             
             // retrieve urls for text searches            
@@ -87,7 +110,7 @@
                 return $result;
             }
             
-            // retrieve number of pages
+            // retrieve total pages and results
             public function totals($topic, $text)
             {
                 /*
