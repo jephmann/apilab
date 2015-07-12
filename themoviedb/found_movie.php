@@ -35,6 +35,7 @@
     $movie_title        = $movie['title'];
     $movie_overview     = $movie['overview'];
     $movie_release_date = $movie['release_date'];
+    $imdb_link          = $objMovieDB->url_imdb_movie($movie_imdb);
     
     // 2 of 3: topic's credits
     $url_credits        = $objMovieDB->url_found($id, $topic, 'credits');
@@ -42,9 +43,15 @@
     
     // credits
     $credits            = $data['credits'];
+    $use_cast_id        = 'cast_id';
+    
     $credits_cast       = $credits['cast'];
-    $credits_crew       = $credits['crew'];
     $ct_credits_cast    = count($credits_cast);
+    usort($credits_cast, function ($a, $b) use(&$use_cast_id){
+        return $a[$use_cast_id] - $b[$use_cast_id];
+    });
+    
+    $credits_crew       = $credits['crew'];
     $ct_credits_crew    = count($credits_crew);
     
     // 3 of 3: topic's images

@@ -36,6 +36,7 @@
     $person_biography   = $person['biography'];
     $person_birthday    = $person['birthday'];
     $person_deathday    = $person['deathday'];
+    $imdb_link          = $objMovieDB->url_imdb_person($person_imdb);
     
     // 2 of 3: topic's credits
     $url_credits        = $objMovieDB->url_found($id, $topic, 'movie_credits');
@@ -43,10 +44,19 @@
     
     // credits
     $credits            = $data['credits'];
+    $use_release_date   = 'release_date';
+    
     $credits_cast       = $credits['cast'];
-    $credits_crew       = $credits['crew'];
     $ct_credits_cast    = count($credits_cast);
+    usort($credits_cast, function ($a, $b) use(&$use_release_date){
+        return $b[$use_release_date] - $a[$use_release_date];
+    });    
+    
+    $credits_crew       = $credits['crew'];
     $ct_credits_crew    = count($credits_crew);
+    usort($credits_crew, function ($a, $b) use(&$use_release_date){
+        return $b[$use_release_date] - $a[$use_release_date];
+    });
     
     // 3 of 3: topic's images
     $url_images         = $objMovieDB->url_found($id, $topic, 'images');

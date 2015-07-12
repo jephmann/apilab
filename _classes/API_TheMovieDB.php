@@ -14,11 +14,21 @@
             //private $url                  = "http://private-85e98-themoviedb.apiary-mock.com/3/"; *
             // * -- simple reminders that APIs change.
             
-            public static $url_imdb         = "http://www.imdb.com/";
+            public $url_imdb                = "http://www.imdb.com/";
             public static $url_themoviedb   = "https://www.themoviedb.org/";
-            
-            // image path links (image files appended later)
             public $url_image               = "https://image.tmdb.org/t/p/";
+            
+            public function url_imdb_person($imdb)
+            {
+                $result = "{$this->url_imdb}name/{$imdb}/";
+                return $result;
+            }
+            
+            public function url_imdb_movie($imdb)
+            {
+                $result = "{$this->url_imdb}title/{$imdb}/";
+                return $result;
+            }
             
             // retrieve images for found persons (profile)
             public function url_profile($filename)
